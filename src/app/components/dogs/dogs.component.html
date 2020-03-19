@@ -1,0 +1,20 @@
+
+<div class="card">
+  <mat-card>
+  <mat-nav-list>
+    <mat-list-item *ngFor="let dog of dogs" (click)="onSelect(dog.idDog)">
+    {{dog.name}}
+
+    </mat-list-item>
+  </mat-nav-list>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" style="margin-right:100px;" (click)="openDialog()">Add Dog</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="example-container" *ngIf="idDog">
+  <app-dog [idDog]="idDog"></app-dog>
+</div>
+
+

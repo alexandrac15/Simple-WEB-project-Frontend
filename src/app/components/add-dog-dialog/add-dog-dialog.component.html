@@ -1,0 +1,23 @@
+<p>add-dog-dialog works!</p>
+
+<mat-card >
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Name"  type="text" class="form-control" [(ngModel)]="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Breed"  type="text" class="form-control" value= "{{breed}}"[(ngModel)]="breed" >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Color</mat-label>
+      <mat-select  [(ngModel)]="color"><mat-option *ngFor="let color of colors" [value]="color">{{color}}</mat-option></mat-select>
+    </mat-form-field>
+    <mat-slide-toggle [(ngModel)]="playful" >Playful</mat-slide-toggle>
+
+
+  </div>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" style="margin-right:100px;" (click)="close()">ADD</button>
+
+  </mat-card-actions>
+</mat-card>

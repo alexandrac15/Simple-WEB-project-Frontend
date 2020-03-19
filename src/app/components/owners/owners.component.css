@@ -1,0 +1,11 @@
+.card {
+
+  width: 600px;
+  height: 200px;
+  position: absolute;
+  padding-top: 50px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+
+}
